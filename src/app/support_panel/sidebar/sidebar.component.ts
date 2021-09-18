@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  public navItems = ['Active Incident Reports', 'Resolved Incident Reports']
+  public navItems = [
+    {
+      label: 'Active Incident Reports',
+      link : 'incidents'
+    },
+    {
+      label: 'Users',
+      link : 'users'
+    },
+  ]
 
   constructor() { }
 

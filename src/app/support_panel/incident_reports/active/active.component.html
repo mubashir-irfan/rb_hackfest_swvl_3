@@ -1,0 +1,28 @@
+<div class="active-incidents-parent">
+  <!-- <ng-container *ngFor="let incident of incidentsData">
+    <div class="incident-card" >
+      <div class="severity-tag"><span [className]="[incident.severity]">{{incident.severity}}</span></div>
+      <div><span>Category: </span>{{incident.type}}</div>
+      <div>{{incident.title}}</div>
+      <div style="float:right;">{{incident.date}}</div>
+    </div>
+  </ng-container> -->
+  <nz-table #basicTable [nzData]="incidentsData" [nzFrontPagination]="false">
+    <thead>
+      <tr>
+        <th>Severity</th>
+        <th>Type</th>
+        <th>Title</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data" class="incident-row" (click)="navigateToDetails(data.id)">
+        <td class="severity-tag"><span [className]="[data.severity]">{{data.severity}}</span></td>
+        <td>{{data.type}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.date}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

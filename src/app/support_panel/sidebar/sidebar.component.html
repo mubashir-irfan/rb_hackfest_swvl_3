@@ -1,0 +1,8 @@
+<div class="sidebar-parent">
+  <div class="title">
+    <span [routerLink]="'/incidents'">Admin Panel</span>
+  </div>
+  <ng-container *ngFor="let nav of navItems">
+    <div class="nav-item" [routerLink]="nav.link">{{nav.label}}</div>
+  </ng-container>
+</div>

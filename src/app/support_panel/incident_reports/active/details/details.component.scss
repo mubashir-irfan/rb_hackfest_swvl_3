@@ -1,0 +1,36 @@
+.incident-details-parent {
+  h1 { text-align: center; }
+  .heading {
+    font-weight: 600;
+  }
+
+  .brief {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border: 2px solid black;
+    background-color: #ebebeb;
+  }
+
+  .member-input {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ebebeb;
+    padding: 1rem;
+
+    .verification span{
+      color: green;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &.red {
+        color: red;
+      }
+    }
+  }
+
+  .actions {
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}

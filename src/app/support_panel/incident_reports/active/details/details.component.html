@@ -1,0 +1,41 @@
+<div *ngIf="incident" class="incident-details-parent">
+	<h1 class="heading">Incident Report</h1>
+
+  <nz-table #details [nzData]="incident" [nzFrontPagination]="false">
+    <thead>
+      <tr>
+        <th>Severity</th>
+        <th>Type</th>
+        <th>Title</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of details.data" class="incident-row">
+        <td class="severity-tag"><span [className]="[data.severity]">{{data.severity}}</span></td>
+        <td>{{data.type}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.date}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+  <h2><strong>Reporter Claim</strong></h2>
+	<div class="description">
+		{{incident[0].description}}
+	</div>
+  <nz-divider></nz-divider>
+  <h2><strong>Trip Members Input</strong></h2>
+	<div class="members-input-parent">
+		<div class="member-input" *ngFor="let input of incident[0].memberComments">
+      <div><strong>ID: </strong>{{input.userID}}</div>
+      <div><strong>Name: </strong>{{input.userName}}</div>
+      <div class="verification"><strong>Verification: </strong><span [class.red]="input.verification===true">{{input.verification}}</span></div>
+      <div><strong>Comments: </strong>{{input.comment}}</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button nz-button nzType="default" class="dimsiss">Dismiss Incident Report</button>
+    <button nz-button nzType="default" nzDanger class="accept" (click)="navigateToUserProfile(incident[0].subjectID)">Accept Incident Report</button>
+  </div>
+</div>
