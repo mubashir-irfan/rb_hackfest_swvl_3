@@ -1,0 +1,13 @@
+.global-parent {
+  display: flex;
+  height: 100vh;
+
+  .sidebar {
+    flex: 15%;
+    height: 100%;
+  }
+
+  .main {
+    flex: 85%
+  }
+}
