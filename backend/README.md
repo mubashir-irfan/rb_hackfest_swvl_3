@@ -1,6 +1,6 @@
 # Hackfest Challenge — Backend
 
-NextJS template based backed API for Vercel Cloud.
+NextJS backed API for Vercel Cloud.
 
 See the API related files in pages/api
 
