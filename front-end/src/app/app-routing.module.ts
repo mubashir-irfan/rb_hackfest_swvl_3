@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'admin',
-    loadChildren: () => import('../../admin_panel/admin-panel.module').then(m => m.AdminPanelModule)
+    loadChildren: () => import('../admin_panel/admin-panel.module').then(m => m.AdminPanelModule)
   },
 ]
 

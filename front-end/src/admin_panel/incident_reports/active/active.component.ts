@@ -23,6 +23,6 @@ export class ActiveIncidentsComponent implements OnInit {
   }
 
   public navigateToDetails(id: number | string) {
-    this.router.navigateByUrl(`/incidents/${id}`);
+    this.router.navigateByUrl(`admin/incidents/${id}`);
   }
 }

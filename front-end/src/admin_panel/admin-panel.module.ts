@@ -5,22 +5,25 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';import { CommonModule } 
 
 import { NgModule } from '@angular/core';
 
-import { IncidentsRoutingModule } from './incident_reports/incidents-routing.module';
 import { AdminPanelComponent } from './admin-panel.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { DemoNgZorroAntdModule } from './shared/ant.module';
+import { ActiveIncidentsComponent } from './incident_reports/active/active.component';
+import { IncidentDetailsComponent } from './incident_reports/active/details/details.component';
+import { UserDetailsComponent } from './users/user/details/details.component';
+import { UserComponent } from './users/user/user.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AdminPanelRoutingModule } from './admin-panel-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    IncidentsRoutingModule,
     NzTableModule,
     NzDividerModule,
     NzButtonModule,
-    DemoNgZorroAntdModule,
+    AdminPanelRoutingModule,
   ],
   exports: [],
-  declarations: [ AdminPanelComponent, SidebarComponent],
+  declarations: [ ActiveIncidentsComponent, IncidentDetailsComponent, AdminPanelComponent, SidebarComponent, UserComponent, UserDetailsComponent],
   providers: [],
 })
 export class AdminPanelModule { }
