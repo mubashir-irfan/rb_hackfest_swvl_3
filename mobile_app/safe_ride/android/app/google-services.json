@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "508483067793",
+    "firebase_url": "https://swvl3-99fe5-default-rtdb.firebaseio.com",
+    "project_id": "swvl3-99fe5",
+    "storage_bucket": "swvl3-99fe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508483067793:android:2d32272c2bce4d18cf8430",
+        "android_client_info": {
+          "package_name": "com.example.safe_ride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508483067793-t670j8h4pdmv7bk4is7kqp0sch5q99d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEi1Zy58f_ChMoyeK0dr3PKaaybmFfNPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508483067793-t670j8h4pdmv7bk4is7kqp0sch5q99d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
