@@ -1,0 +1,35 @@
+<main>
+  <h1 class="title">High Alert Incident</h1>
+
+  <form [formGroup]="incidentForm">
+    <div class="scrollable-content">
+      <p class="warning">
+        Note: This form is to report in case there is danger to your safety or serious has crime occured.
+        <br/>
+        Submitting this would call police and driver will be asked to stop vehicle immediately
+      </p>
+      <section>
+        <h2 class="section-heading">Incident Info</h2>
+        <div class="content">
+          <div class="row">
+            <label>Incident Type</label>
+            <div class="data">
+            <nz-select nzPlaceHolder="Select Incident Type" formControlName="incidentType">
+              <nz-option  *ngFor="let option of incidentTypeOptions" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+            </nz-select>
+            </div>
+          </div>
+
+          <div class="row">
+            <label>Description</label>
+            <div class="data">
+              <textarea nzAutosize formControlName="description"></textarea> 
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <button class="submit-btn" nz-button nzType="primary" nzBlock>Submit</button>
+  </form>
+</main>

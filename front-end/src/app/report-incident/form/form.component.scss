@@ -1,0 +1,61 @@
+@import "../../globals.scss";
+
+main {
+  height: 100vh;
+
+  .title {
+    text-align: center;
+    color: $primary-color;
+    padding: 16px 0;
+    border-bottom: 1px solid $grey;
+    margin: 0;
+  }
+
+  form { height: calc(100% - 60px); }
+  .scrollable-content {
+    overflow-y: auto;
+    height: calc(100% - 36px);
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+    padding-top: 16px;
+
+    .section-heading {
+      color: $secondary-color;
+      text-align: center;
+    }
+
+    .content {
+      width: 100%;
+
+      .row {
+        margin-bottom: 16px;
+
+        .data, nz-select, textarea, nz-input-number {
+          width: 100%;
+          height: 32px;
+        }
+
+        label {
+          margin-left: 5px;
+          color: black;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.submit-btn {
+  position: fixed;
+  bottom: 0px;
+  height: 36px;
+}
+
+.warning {
+  color: $warn;
+  font: $bold;
+  padding: 16px 16px 0 16px;
+}

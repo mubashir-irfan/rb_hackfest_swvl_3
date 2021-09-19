@@ -1,0 +1,20 @@
+@import "../../globals.scss";
+
+main {
+  height: 100vh;
+
+  .title {
+    text-align: center;
+    color: $primary-color;
+    padding: 16px 0;
+    border-bottom: 1px solid $grey;
+    margin: 0;
+  }
+}
+
+nz-list {
+  overflow-y: auto;
+  height: calc(100% - 60px);
+  width: 100%;
+
+}

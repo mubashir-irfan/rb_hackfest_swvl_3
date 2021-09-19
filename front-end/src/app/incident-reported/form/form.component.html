@@ -1,0 +1,46 @@
+<main>
+    <h1 class="title">Verify Reported Incident</h1>
+  
+    <form [formGroup]="incidentForm">
+      <div class="scrollable-content">
+        <div class="incident">
+          <p class="incident-title">Following incident has been reported that is involving you </p>
+          <div class='incident-info'>
+            <div>Incident</div>
+            <div>{{reportedIncident.incidentType}}</div>
+            <div>Description</div>
+            <div>{{reportedIncident.description}}</div>
+            <div>Date & Time</div>
+            <div>{{reportedIncident.date}}</div>
+            <div>Potential Perpetrator</div>
+            <div>{{reportedIncident.name}}</div>
+            <div>Potential Perpetrator Seat No.</div>
+            <div>{{reportedIncident.perpetratorSeatNum}}</div>
+          </div>
+        </div>
+    
+        <section>
+          <h2 class="section-heading">Can you verfiy the Authenticity of the event?</h2>
+          
+          <div class="content">
+            <div class="row">
+              <label>Comment</label>
+              <div class="data">
+                <input nz-input placeholder="Add Comment if any" formControlName="description"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkbox-container">
+            <div class="row">
+              <span>is the described event true?</span>
+              <label nz-checkbox [disabled]="incidentForm.controls.notValid.value" formControlName="isValid">True</label>
+              <label [disabled]="incidentForm.controls.isValid.value" nz-checkbox formControlName="notValid">False</label>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+      <button class="submit-btn" nz-button nzType="primary" (click)="onSave()" nzBlock>Submit</button>
+    </form>
+  </main>

@@ -1,0 +1,33 @@
+//colors
+$primary-color: #fc153b;
+$secondary-color: #212259;
+$white: #fff;
+$grey: #DEE3E8;
+$warn: #D93939;
+
+$font-samll: 12px;
+$font-medium: 14px;
+$font-large: 18px;
+
+$bold: 700;
+$bolder: 900;
+$normal: 400;
+
+* {
+  font-family: sans-serif;
+}
+
+p {
+  font-size: $font-medium;
+  font-weight: $normal;
+}
+
+h1 {
+  font-size: $font-large;
+  font-weight: $bolder;
+}
+
+h2 {
+  font-size: $font-medium;
+  font-weight: $bold;
+}

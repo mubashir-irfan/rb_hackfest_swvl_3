@@ -1,0 +1,62 @@
+<main>
+  <h1 class="title">Report Incident</h1>
+
+  <form [formGroup]="incidentForm">
+    <div class="scrollable-content">
+      <section>
+        <h2 class="section-heading">Incident Info</h2>
+        <div class="content">
+          <div class="row">
+            <label>Incident Type</label>
+            <div class="data">
+            <nz-select nzPlaceHolder="Select Incident Type" formControlName="incidentType">
+              <nz-option  *ngFor="let option of incidentTypeOptions" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+            </nz-select>
+            </div>
+          </div>
+
+          <div class="row">
+            <label>Description</label>
+            <div class="data">
+              <textarea nzAutosize formControlName="description"></textarea> 
+            </div>
+
+          </div><div class="row">
+            <label>Date & Time</label>
+            <div class="data">
+              <nz-date-picker formControlName="date"></nz-date-picker>
+              <nz-time-picker formControlName="time" nzFormat="HH:mm"></nz-time-picker>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-heading">Perpetrator Info</h2>
+        <div class="content">
+          <div class="row">
+            <label>Seat Number</label>
+            <div class="data">
+            <nz-input-number formControlName="perpetratorSeatNum" [nzMin]="1" [nzMax]="15" [nzStep]="1"></nz-input-number>
+            </div>
+          </div>
+
+          <div class="row">
+            <label>Name(if known)</label>
+            <div class="data">
+              <input nz-input placeholder="Enter Perpetrator Name" formControlName="name"/>
+            </div>
+          </div>
+          
+          <div class="row">
+            <label>Comment</label>
+            <div class="data">
+              <input nz-input placeholder="Add Comment if any" formControlName="name"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <button class="submit-btn" (click)="onSave()" nz-button nzType="primary" nzBlock>Submit</button>
+  </form>
+</main>
