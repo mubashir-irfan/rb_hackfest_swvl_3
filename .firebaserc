@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "swvl3-99fe5": {
+      "hosting": {
+        "swvl3": [
+          "swvl3-99fe5"
+        ]
+      }
+    }
+  }
+}
