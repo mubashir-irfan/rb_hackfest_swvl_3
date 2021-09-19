@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
       },
       {
         id: 2,
-        incidentType: 'Harrasement'
+        incidentType: 'Theft'
       },
     ]
   }

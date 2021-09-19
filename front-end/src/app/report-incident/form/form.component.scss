@@ -14,13 +14,16 @@ main {
   form { height: calc(100% - 60px); }
   .scrollable-content {
     overflow-y: auto;
-    height: calc(100% - 36px);
+    height: calc(100%);
     width: 100%;
   }
 
   section {
-    width: 100%;
-    padding-top: 16px;
+    margin: 16px;
+    box-shadow:  0 2px rgba(#262F36, 0.08), 0 2px 4px rgba(#262F36, 0.16);
+    border-radius: 7px;
+    box-shadow: 0px 0px 0px 1px rgba(#262F36, 0.08);
+    padding: 10px;
 
     .section-heading {
       color: $secondary-color;
@@ -49,9 +52,12 @@ main {
 }
 
 .submit-btn {
-  position: fixed;
-  bottom: 0px;
   height: 36px;
+  background-color: $primary-color;
+  border: 0px;
+  border-radius: 20px;
+  margin: 16px;
+  width: -webkit-fill-available;
 }
 
 .warning {

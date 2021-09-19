@@ -49,9 +49,12 @@ main {
 }
 
 .submit-btn {
-  position: fixed;
-  bottom: 0px;
   height: 36px;
+  background-color: $primary-color;
+  border: 0px;
+  border-radius: 20px;
+  margin: 16px;
+  width: -webkit-fill-available;
 }
 
 .warning {
